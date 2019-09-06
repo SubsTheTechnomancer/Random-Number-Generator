@@ -8,12 +8,12 @@ float* randomNumber(float seed){
     *vals = seed;
     float temp;
 
-    for(int i = 0; i < 100; i++){
+    for(int i = 0; i < 10; i++){
         if(i == 0)
             temp = seed;
         else   
             temp = *(vals-1);
-        for(int j = 0; j < 10; j++){
+        for(int j = 0; j < 100; j++){
             temp *= 3;
             temp += 0.0516;
             if(temp > 1) temp -= (int)temp;
@@ -31,6 +31,8 @@ float* randomNumber(float seed){
 int main(){
 
     float seed;
+
+    cout<<"Enter the seed: ";
     cin>>seed;
 
     float *ans = randomNumber(seed);
